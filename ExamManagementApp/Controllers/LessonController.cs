@@ -69,7 +69,7 @@ namespace ExamManagementApp.Controllers
         {
             var objects = await _LessonRepository.GetAllAsync();
 
-            var result = _mapper.Map<IEnumerable<LessonDTO>>(objects);
+            var result = _mapper.Map<IEnumerable<LessonDTO>>(objects).OrderByDescending(m => m.Id);
 
             return Ok(result);
         }

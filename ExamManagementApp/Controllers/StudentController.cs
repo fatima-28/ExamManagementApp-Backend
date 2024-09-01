@@ -68,7 +68,7 @@ public class StudentController : ControllerBase
     {
         var objects = await _studentRepository.GetAllAsync();
 
-        var result = _mapper.Map<IEnumerable<StudentDTO>>(objects);
+        var result = _mapper.Map<IEnumerable<StudentDTO>>(objects).OrderByDescending(m=>m.Id);
 
         return Ok(result);
     }
