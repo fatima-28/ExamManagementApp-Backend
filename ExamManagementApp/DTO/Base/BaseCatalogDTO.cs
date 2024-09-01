@@ -1,7 +1,6 @@
-﻿namespace ExamManagementApp.DTO.Base
+﻿namespace ExamManagementApp.DTO.Base;
+
+public abstract class BaseCatalogDTO
 {
-    public abstract class BaseCatalogDTO
-    {
-        public int Id { get; set; }
-    }
+    public int Id { get; set; }
 }

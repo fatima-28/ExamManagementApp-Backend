@@ -1,8 +1,7 @@
 ﻿using ExamManagementApp.Domain.Entities;
 
-namespace ExamManagementApp.Repositories.Abstracts
+namespace ExamManagementApp.Repositories.Abstracts;
+
+public interface ILessonRepository : IRepository<Lesson>
 {
-    public interface ILessonRepository : IRepository<Lesson>
-    {
-    }
 }

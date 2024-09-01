@@ -73,5 +73,4 @@ public class StudentController : ControllerBase
         return Ok(result);
     }
 
-
 }

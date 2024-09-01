@@ -2,14 +2,12 @@
 using ExamManagementApp.Domain.Entities;
 using ExamManagementApp.Repositories.Abstracts;
 
-namespace ExamManagementApp.Repositories.Concretes
+namespace ExamManagementApp.Repositories.Concretes;
+
+
+public class LessonRepository : Repository<Lesson>, ILessonRepository
 {
-
-    public class LessonRepository : Repository<Lesson>, ILessonRepository
+    public LessonRepository(AppDbContext appDbContext) : base(appDbContext)
     {
-        public LessonRepository(AppDbContext appDbContext) : base(appDbContext)
-        {
-        }
     }
-
 }

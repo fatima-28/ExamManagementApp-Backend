@@ -1,15 +1,14 @@
 ﻿using ExamManagementApp.DTO.Base;
 
-namespace ExamManagementApp.DTO
+namespace ExamManagementApp.DTO;
+
+public class StudentDTO: BaseCatalogDTO
 {
-    public class StudentDTO: BaseCatalogDTO
-    {
-        public string Name { get; set; }
+    public string Name { get; set; }
 
-        public string Surname { get; set; }
+    public string Surname { get; set; }
 
-        public int Number { get; set; }
+    public int Number { get; set; }
 
-        public int Class { get; set; }
-    }
+    public int Class { get; set; }
 }

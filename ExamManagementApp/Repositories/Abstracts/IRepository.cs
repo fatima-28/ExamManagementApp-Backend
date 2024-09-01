@@ -1,22 +1,16 @@
 ﻿using ExamManagementApp.Domain.Entities.Base;
 
-namespace ExamManagementApp.Repositories.Abstracts
+namespace ExamManagementApp.Repositories.Abstracts;
+
+public interface IRepository<T> where T : BaseEntity
 {
+    Task<int> CreateAsync(T obj);
 
-    public interface IRepository<T> where T : BaseEntity
-    {
+    Task<bool> UpdateAsync(T obj);
 
+    Task<bool> DeleteAsync(int id);
 
-        Task<int> CreateAsync(T obj);
+    Task<T> GetByIdAsync(int id);
 
-        Task<bool> UpdateAsync(T obj);
-
-        Task<bool> DeleteAsync(int id);
-
-        Task<T> GetByIdAsync(int id);
-
-        Task<List<T>> GetAllAsync();
-
-
-    }
+    Task<List<T>> GetAllAsync();
 }
